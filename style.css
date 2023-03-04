@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box ;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+/*----------------------------------------------------------*/
+
+
+input {
+  display: none;
+}
+nav li {
+  text-decoration: none;
+  list-style: none;
+}
+nav {
+    position: fixed;
+    width: 100%;
+  background: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 12%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+nav .logo {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 0 20px;
+}
+nav span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+nav .nav-list {
+  margin:0;
+  padding: 0;
+  display: flex;
+   text-align: left;
+   align-items: center;
+
+}
+nav .nav-list .nav-item {
+  cursor: pointer;
+  height: 100%;
+  transition: 0.3s;
+  padding: 20px;
+
+}
+nav .nav-list .nav-item .nav-link {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-bottom: 5px;
+  border-bottom: 0px solid white;
+
+}
+nav .nav-list .nav-item:hover .nav-link {
+  border-bottom: 1px solid white;
+}
+
+/*----------------------------------------------*/
+
+@media (max-width: 935px) {
+  nav {
+    padding: 0 10%;
+  }
+  nav .nav-list .nav-item {
+    padding: 0 10px;
+  }
+}
+/*----------------------------------------------*/
+
+@media (max-width: 675px) {
+nav {
+    padding: 0 8%;
+  }
+
+  nav .nav-list {
+    display: grid;
+    position: absolute;
+     z-index: -1;
+     background: rgba(18,18,18,95%);
+    width: 100%;
+    left: 0;
+   
+    top: 70px;
+    transform: translatex(120px);
+    transition: 0.3s;
+    gap: 50px;
+    padding-top:50px;
+    padding-bottom:0px;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0.0;
+     }
+
+  nav .nav-list .nav-item {
+    padding:0;}
+
+nav .menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background:none;
+    cursor: pointer ;}
+
+nav .menu-toggle .bar {
+    width: 33px;
+    height: 4px;
+    background: #fff;
+    margin-bottom: 5px;
+    transition: 0.3s;
+    position: relative;
+    border-radius: 6px;
+    z-index: 1; 
+    transform-origin: 0 0;} 
+
+input:checked ~ nav .menu-toggle {
+/*  margin-top: 0px;*/}
+
+nav .menu-toggle:hover .bar:nth-child(2) {
+  transform: translateX(10px);
+  background-color: #aaa;}
+
+input:checked ~ nav .menu-toggle .bar:nth-child(1) {
+ transform: translate(0px, -2px) rotate(45deg);
+}
+
+input:checked ~ nav .menu-toggle .bar:nth-child(3) {
+  transform: translate(-3px, 3px) rotate(-45deg)
+}
+
+input:checked ~ nav .menu-toggle .bar:nth-child(2) {
+  opacity: 0;
+  transform: translatex(15px);
+}
+
+input:checked ~ nav .menu-toggle:hover .bar{
+  background-color: #aaa;
+}
+
+input:checked ~ nav .nav-list .nav-item {
+  width: 100vw;
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
+}
+
+input:checked ~ nav .nav-list .nav-item:hover {
+  width: 100vw;
+  padding-bottom: 5px;
+  border-bottom: 1px solid grey;
+}
+input:checked ~ nav .nav-list {
+  transform: translateX(0px);
+  visibility: visible;
+      opacity: 1;}
+
+input:checked ~ nav .nav-list .nav-item .nav-link {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 0px solid white;}
+
+input:checked ~ nav .nav-list .nav-item:hover .nav-link {
+    border-bottom: 0px solid white;
+    color: grey;}
+
+nav .navbar-left{
+    border-bottom: 2px;
+    border-color: white;  }
+  
+}
+/*----------------------------------------------*/
+
+
+
+/* HERO BANNER */
+
+#hero {
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+  z-index: -2;
+}
+
+#hero img {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  height:auto;
+  margin:auto;
+  padding-top:120px;
+  object-fit: scale-down;
+}
+
+#mainpage-body div{
+  margin: 0;
+  height: 1000px;
+  background-color: #ffffff;
+  padding:10px;
+}
+
